@@ -1,0 +1,96 @@
+<head>
+<link rel="stylesheet" href="app.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.12/css/uikit.css" integrity="sha256-+pehdJ4wZHKrQtcJ+YyS28JW10O7ncXrEmByo7HAxFg=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.js" integrity="sha256-Kk9BaeWdEcyo4ksPRHhPgDyedyTwwPCbczgcIoCTvls=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="uk-container">
+	<div id="exercises">
+	</div>
+
+
+</div>
+
+</body>
+<script id="tutorial-template" type="text/template">
+    <table class="uk-table uk-table-striped">
+	    <caption class="table-caption">{{name}}</caption>
+	    <thead>
+	        <tr>
+	            <th>Exercise No</th>
+	            <th>Exercise Name</th>
+	            <th>Beschreibung</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>{{exercise_no}}</td>
+	            <td>{{name}}</td>
+	            <td>{{beschreibung}}</td>
+	        </tr>
+	    </tbody>
+	    <thead>
+	        <tr>
+	            <th>Image</th>
+	            <th>Alter</th>
+	            <th>Ort</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>{{image_patch}}</td>
+	            <td>{{alter}}</td>
+	            <td>{{ort}}</td>
+	        </tr>
+	    </tbody>
+	    <thead>
+	        <tr>
+	            <th>Organisationsform</th>
+	            <th>Teil</th>
+	            <th>gruppengrösse</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>{{organisationsform}}</td>
+	            <td>{{teil}}</td>
+	            <td>{{gruppengrösse}}</td>
+	        </tr>
+	    </tbody>
+	    <thead>
+	        <tr>
+	            <th>schwerpunkt_technik</th>
+	            <th>schwerpunkt_taktik</th>
+	            <th>schwerpunkt_fitness</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>{{schwerpunkt_technik}}</td>
+	            <td>{{schwerpunkt_taktik}}</td>
+	            <td>{{schwerpunkt_fitness}}</td>
+	        </tr>
+	    </tbody>
+	     <thead>
+	        <tr>
+	            <th>schwerpunkt_psycho_social</th>
+	            <th>schwerpunkt_sdg</th>
+	            <th>PDF Link</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td>{{schwerpunkt_psycho_social}}</td>
+	            <td>{{schwerpunkt_sdg}}</td>
+	            <td>{{file_to_pdf}}</td>
+	        </tr>
+	    </tbody>
+	</table>
+</script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="app.js"></script>
+

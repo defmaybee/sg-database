@@ -1,0 +1,47 @@
+<head>
+<link rel="stylesheet" href="app.css" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.12/css/uikit.css" integrity="sha256-+pehdJ4wZHKrQtcJ+YyS28JW10O7ncXrEmByo7HAxFg=" crossorigin="anonymous" />
+</head>
+<body>
+	
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="app.js"></script>
+<div class="uk-container">
+<h1 class="uk-heading-primary">Results</h1>
+	
+	
+			    <
+
+
+			     <%   for (var property in excounts) { %>
+			    <% if (excounts.hasOwnProperty(property)) { %>
+			        <h2><%=property %></h2>
+			       
+			        <% excounts[property].result.forEach(function(e){ %>
+			        	<% var generatedID = property + "_" + e._id; %>
+			        	<%   var genID = generatedID.replace(/[^A-Z0-9]+/ig, "_"); %>
+			        	<% console.log(generatedID); %>
+						<input class="uk-checkbox" type="checkbox" id="<%=genID%>"> <%= e._id %> <span class="uk-text-bold">(<%= e.count %>)</span><br />
+			       
+			       <% }) %>
+
+
+			        <% console.log("ausprägung " + excounts[property].result.count); %>
+
+
+			    
+			    <% } %>
+			<% } %>
+			   	    
+			</form>
+		</div>
+		<div class="results">
+		<p>PLease find the results here</p>
+		</div>
+
+	</div>
+</div>
+</body>
