@@ -25,7 +25,7 @@
 			        	<% var generatedID = property + "XXX" + e._id; %>
 			        	<%   var genID = generatedID.replace(/[^A-Z0-9äöüÄÖÜß]+/ig, "_"); %>
 			        	<% console.log(generatedID); %>
-						<input class="uk-checkbox" type="checkbox" id="<%=genID%>" value="<%=e._id%>" name=<%=property%>> <%= e._id %> <span class="uk-text-bold">(<%= e.count %>)</span><br />
+						<input class="uk-checkbox" type="checkbox" id="<%=genID%>" value="<%=e._id%>" name=<%=property%>> <%= e._id %> <span class="uk-text-bold" id="count">(<%= e.count %>)</span><br />
 			       
 			       <% }) %>
 

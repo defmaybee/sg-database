@@ -17,6 +17,7 @@ app.get("/", function(req, res){
 
 app.get('/form', async (req,res) => {
 
+	
 	var excounts = {};
 	var cluster = ["alter", "ort", "organisationsform","teil","gruppengrösse", "schwerpunkt_taktik", "schwerpunkt_fitness", "schwerpunkt_psycho_social", "schwerpunkt_sdg"];
 
@@ -24,6 +25,10 @@ app.get('/form', async (req,res) => {
 		for (const cl of cluster) {
 			
 				await db.Exercise.aggregate([
+				           {$match: 
+								req.query
+            						
+        			},
 				           {"$group" : {_id:"$" + cl, count:{$sum:1}}} 
 				    ], function (err, result) {
 				        if (err) {
@@ -49,3 +54,11 @@ app.use('/api/exercises', exRoutes);
 app.listen(3000, function() {
 	console.log("Server is running");
 });
+
+
+// on click submit
+
+
+// wenn ich eine kategorie anklicke (on click checkount) soll der count neu berechnet werden
+
+// wie?
