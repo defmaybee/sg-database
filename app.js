@@ -12,7 +12,11 @@ app.set("view engine", "ejs");
 
 
 app.get("/", function(req, res){
-	res.sendFile("index.html");
+	res.render("index");
+});
+
+app.get("/results", function(req, res){
+	res.sendFile(__dirname + "/views/" + "results.html");
 });
 
 app.get('/form', async (req,res) => {
@@ -34,10 +38,7 @@ app.get('/form', async (req,res) => {
 				        if (err) {
 				            next(err);
 				        } else {				          
-				            // console.log("*********************************");
-				            // console.log(result);
-				            // console.log("*********************************");
-				            // console.log(cl);		       
+				              
 				            excounts[cl] = { result };
 
 				            
@@ -45,7 +46,7 @@ app.get('/form', async (req,res) => {
 				    });	
 				
 		}
-		// res.send(excounts);
+		
 		res.render("form",{excounts:excounts});
 })
 
@@ -55,10 +56,3 @@ app.listen(3000, function() {
 	console.log("Server is running");
 });
 
-
-// on click submit
-
-
-// wenn ich eine kategorie anklicke (on click checkount) soll der count neu berechnet werden
-
-// wie?

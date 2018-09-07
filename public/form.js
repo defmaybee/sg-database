@@ -15,7 +15,7 @@ $(function() {
 		if (options[i].type === 'checkbox') {
 			options[i].onclick = function() {
 				var dings = this.id.replace("XXX", " ");
-				console.log(dings);
+				
 				// document.getElementById("checkboxes").submit()
 			}
 		}
@@ -24,7 +24,3 @@ $(function() {
 
 });
 
-
-
-
-// Was wurde von dem Form gesendet

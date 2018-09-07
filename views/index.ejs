@@ -1,18 +1,42 @@
+<html>
 <head>
 <link rel="stylesheet" href="app.css" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.12/css/uikit.css" integrity="sha256-+pehdJ4wZHKrQtcJ+YyS28JW10O7ncXrEmByo7HAxFg=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.js" integrity="sha256-Kk9BaeWdEcyo4ksPRHhPgDyedyTwwPCbczgcIoCTvls=" crossorigin="anonymous"></script>
 </head>
+<title>Sharing Goals Search Engine</title>
 <body>
+	
+
+
 
 <div class="uk-container">
-	<div id="exercises">
-	</div>
+<h1 class="uk-heading-primary">Sharing Goals Search Engine</h1>	
+	<div class="uk-flex uk-flex-left">
+		
+		<div id="formwrapper">
+			<div id="form">
+			</div>
+	    </div>
+
+		<div id="results">
+		
+
+		</div>
+		</div>
 
 
-</div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.2/mustache.js" integrity="sha256-Kk9BaeWdEcyo4ksPRHhPgDyedyTwwPCbczgcIoCTvls=" crossorigin="anonymous"></script>
 
-</body>
+
+
+
+<script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript" src="render.js"></script>
+
 <script id="tutorial-template" type="text/template">
     <table class="uk-table uk-table-striped">
 	    <caption class="table-caption">{{name}}</caption>
@@ -88,9 +112,6 @@
 	    </tbody>
 	</table>
 </script>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script type="text/javascript" src="app.js"></script>
 
+</body>
+</html>

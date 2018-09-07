@@ -19,16 +19,7 @@ db.Exercise.find(req.query)
 });
 
 
-router.get('/herrje', function(req,res){
-	console.log("herrje gehittet");
-	db.Exercise.find()
-	.then(function(ex){
-		res.send(ex);
-	})
-	.catch(function(err){
-		res.send(err);
-	})
-});
+
 
 router.get('/', function(req,res){
 	console.log("hit the standargfdsd´route");
@@ -50,14 +41,6 @@ module.exports = router;
 
 
 
-// //
-// array = enthält Kategorieren
-// Array[0] befinden sich mehrere Objekte
-
-// Das was ich als Parameter mitschicke, muss in ein Query aufgelöst werden
-
-// onclick soll das form abgeschickt werden
-// wo sehe ich was in form mitgeschickt wurde
 
 
 
