@@ -9,6 +9,12 @@
         "name": "Martin Junker"
       }
     ],
-    "diagrams": []
+    "diagrams": [
+      {
+        "title": "Application",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ]
   }
 }
